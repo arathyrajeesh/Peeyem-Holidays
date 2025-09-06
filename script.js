@@ -2,7 +2,7 @@ const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
 hamburger.addEventListener("click", (e) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     navLinks.classList.toggle("active");
     hamburger.classList.toggle("open");
 });

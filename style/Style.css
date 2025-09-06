@@ -335,22 +335,32 @@ a:hover {
   font-size: 0.875rem;
   color: #6b7280;
 }
-.nav-links.active {
-  display: flex;
+/* Mobile Menu */
+.nav-links {
+  display: none;
   flex-direction: column;
   position: absolute;
   top: 100%;
   right: 0;
   width: 200px;
   background-color: var(--white);
-  padding: 1rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   border-radius: 0 0 8px 8px;
+  z-index: 999;
 }
 
-.nav-links.active a {
-  margin: 0.5rem 0;
+.nav-links a {
+  margin: 0.75rem 1rem;
 }
+
+.nav-links.active {
+  display: flex;
+  max-height: 500px; /* Enough to show all links */
+}
+
 
 @media (min-width: 768px) {
   .header .nav-links {

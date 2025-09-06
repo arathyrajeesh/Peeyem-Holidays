@@ -4,15 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Peeyem Holidays | Explore More, Stress Less</title>
-    <link rel="stylesheet" href="./style/Style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/Style.css" />
 </head>
 <body>
 
-
-    <header>
+    <header class="header">
         <div class="container nav">
         <a class="brand" href="#">
-            <img src="./assets/LOGO.jpg" >
+            <img src="./assets/LOGO.jpg" alt="Logo" class="logo">
             <span>Peeyem Holidays</span>
         </a>
         <nav class="nav-links">
@@ -26,88 +27,107 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="overlay">
-        <div class="hero-text">
-            <h3>Welcome To Our</h3>
-            <h1>TRAVEL AGENCY</h1>
-            <p>Explore the world with stress-free and affordable packages.</p>
-            <a href="#packages" class="btn">Plan Your Trip</a>
-        </div>
+    <section id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+        <h3>Welcome To Our</h3>
+        <h1>TRAVEL AGENCY</h1>
+        <p>Explore the world with stress-free and affordable packages.</p>
+        <a href="#packages" class="btn">Plan Your Trip</a>
         </div>
     </section>
-    <section class="section about-section" id="about-section">
-        <div class="wrap">
-            <h1>WHY WE ARE THE BEST</h1>
-            <p class="subtitle">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-            </p>
-    
-            <div class="features">
-                <div class="feature">
-                <div class="icon"><i class="fa-solid fa-plane"></i></div>
-                <h3>Amazing Travel</h3>
-                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
-                <a class="read-more" href="#">Read More <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
-        
-                <div class="feature">
-                <div class="icon"><i class="fa-solid fa-water"></i></div>
-                <h3>Discover</h3>
-                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
-                <a class="read-more" href="#">Read More <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
-        
-                <div class="feature">
-                <div class="icon"><i class="fa-solid fa-flag"></i></div>
-                <h3>Book Your Trip</h3>
-                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
-                <a class="read-more" href="#">Read More <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
-        
-                <div class="feature">
-                <div class="icon"><i class="fa-solid fa-comment"></i></div>
-                <h3>Nice Support</h3>
-                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
-                <a class="read-more" href="#">Read More <i class="fa-solid fa-chevron-right"></i></a>
-                </div>
+
+    <section id="about-section" class="about">
+        <div class="container">
+        <h1>WHY WE ARE THE BEST</h1>
+        <p class="subtitle">
+            At <strong>Peeyem Holidays</strong>, we believe travel should be simple, affordable, and unforgettable. 
+            With years of expertise in curating holiday packages, we focus on making your journey stress-free, 
+            enjoyable, and full of memories.
+        </p>
+
+        <div class="features">
+            <div class="feature">
+            <div class="icon"><i class="fa-solid fa-plane"></i></div>
+            <h3>Amazing Travel</h3>
+            <p>From breathtaking destinations to seamless itineraries, we ensure every trip is designed for your comfort and excitement.</p>
+            <a href="#" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+
+            <div class="feature">
+            <div class="icon"><i class="fa-solid fa-water"></i></div>
+            <h3>Discover</h3>
+            <p>Explore hidden gems, cultural wonders, and unique adventures tailored to your travel interests.</p>
+            <a href="#" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+
+            <div class="feature">
+            <div class="icon"><i class="fa-solid fa-flag"></i></div>
+            <h3>Book Your Trip</h3>
+            <p>Easy booking, transparent pricing, and flexible packages that make planning your holiday hassle-free.</p>
+            <a href="#" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+
+            <div class="feature">
+            <div class="icon"><i class="fa-solid fa-comment"></i></div>
+            <h3>Nice Support</h3>
+            <p>Our friendly support team is here 24/7 to guide you through every step of your journey.</p>
+            <a href="#" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></a>
             </div>
         </div>
+        </div>
     </section>
-    <section id="contact-section" class="contact-section">
-        <div class="container">
-            <div class="contact-info">
+
+    <section id="contact-section" class="contact">
+        <div class="container contact-grid">
+        <div class="contact-info">
             <h2>CONTACT INFO</h2>
             <p>
-                Feel free to get in touch with us. We are always open to discussing new trips, 
-                creative ideas, or opportunities to make your holidays stress-free.
+            Feel free to get in touch with us. We are always open to discussing new trips, 
+            creative ideas, or opportunities to make your holidays stress-free.
             </p>
-        
+
             <h3>ADDRESS</h3>
-            <p> XCWW+9PF, Chirakkal - Mayyil - Kololam Rd<br>Mayyil, Kerala 670602</p>
-            <a href="mailto:info@yourdomain.com">info@yourdomain.com</a>
-        
+            <p>XCWW+9PF, Chirakkal - Mayyil - Kololam Rd<br>Mayyil, Kerala 670602</p>
+            <a href="mailto:info@yourdomain.com" class="mail-link">info@yourdomain.com</a>
+
             <h3>PHONE</h3>
             <p>+91 95629 22974<br>+91 9123456789</p>
-        
+
             <div class="social-links">
-                <a href="https://www.facebook.com/PeeYemToursTravels/" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com/peeyemholidays/" target="_blank">Instagram</a>
-                <a href="#">Twitter</a>
-            </div>
-            </div>
-        
-            <div class="contact-form">
-            <h2>CONTACT FORM</h2>
-            <form action="#" method="POST">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="E-mail address" required>
-                <textarea name="message" placeholder="Message" required></textarea>
-                <button type="submit">SEND MESSAGE</button>
-            </form>
+            <a href="https://www.facebook.com/PeeYemToursTravels/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/peeyemholidays/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
+
+        <div class="contact-form">
+            <h2>CONTACT FORM</h2>
+            <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="E-mail address" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>
+        </div>
     </section>
+    <footer class="footer">
+        <div class="container footer-content">
+        <div class="footer-left">
+            <p>
+            Copyright © 2025 <span class="brand">Peeyem Holidays</span> |
+            <a href="#">Privacy Policy</a> |
+            <a href="#about-section">About Us</a> |
+            <a href="#">FAQ</a> |
+            <a href="#contact-section">Contact Support</a>
+            </p>
+        </div>
+        <div class="footer-right">
+            <p>Designed by <span class="brand">Peeyem Holidays</span></p>
+        </div>
+        </div>
+    </footer>
 
 </body>
 </html>

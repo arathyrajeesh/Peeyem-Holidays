@@ -33,11 +33,6 @@ const hamburger = document.querySelector('.hamburger');
             });
         }
         
-        // New JavaScript for Skeleton Loading
-        document.addEventListener("DOMContentLoaded", () => {
-            fetchBlogPosts();
-        });
-
         async function fetchBlogPosts() {
             const blogContainer = document.getElementById('blog-container');
 
@@ -79,4 +74,24 @@ const hamburger = document.querySelector('.hamburger');
                 `;
                 blogContainer.appendChild(card);
             });
+        }
+        
+        // New function to load all main content sections
+        document.addEventListener("DOMContentLoaded", () => {
+            loadMainContent();
+        });
+
+        async function loadMainContent() {
+            const skeleton = document.getElementById('content-skeleton');
+            const mainContent = document.getElementById('main-content');
+
+            // Simulate a network delay for fetching content
+            await new Promise(resolve => setTimeout(resolve, 3000));
+
+            // Hide the skeleton and show the actual content
+            skeleton.style.display = 'none';
+            mainContent.style.display = 'block';
+
+            // Now that the blog section is visible, run its specific loading function
+            fetchBlogPosts();
         }

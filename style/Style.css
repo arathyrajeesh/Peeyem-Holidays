@@ -59,6 +59,22 @@ a:hover {
   margin-right: 0.5rem;
 }
 .header .nav-links {
+  display: flex;
+  flex-direction: column; /* This is for the mobile menu */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background-color: var(--white);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 0 0 8px 8px;
+  z-index: 999;
+}
+/* Add this class to your CSS */
+.hidden-on-mobile {
   display: none;
 }
 .header .nav-links a {
@@ -86,7 +102,42 @@ a:hover {
   font-size: 1.5rem;
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  /* Hide the hamburger icon on larger screens */
+  .hamburger {
+    display: none; 
+  }
 
+  /* Display the navigation links in a row */
+  .header .nav-links {
+    display: flex; /* Override the mobile display */
+    flex-direction: row; /* Make them horizontal */
+    position: static; /* Remove absolute positioning */
+    max-height: none; /* Make sure they're visible */
+    box-shadow: none; /* Remove box shadow */
+  }
+
+  /* Make sure the links are styled correctly for desktop */
+  .header .nav-links a {
+    margin: 0 1rem;
+  }
+
+  /* Your other responsive styles should go here */
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+  }
+  .footer-col .newsletter {
+    justify-content: flex-start;
+  }
+  .container nav{
+    gap: 100px;
+  }
+}
 /* Hero */
 .hero {
   position: relative;

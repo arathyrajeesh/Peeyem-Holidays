@@ -1,19 +1,15 @@
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-hamburger.addEventListener("click", (e) => {
-    e.stopPropagation();
-    navLinks.classList.toggle("active");
-    hamburger.classList.toggle("open");
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+navLinks.classList.toggle('active');
 });
 
-document.addEventListener("click", (e) => {
-    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        navLinks.classList.remove("active");
-        hamburger.classList.remove("open");
-    }
+// Close navbar when clicking outside
+document.addEventListener('click', (e) => {
+if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+    navLinks.classList.remove('active');
+}
 });
-
 const form = document.querySelector("#contact-section form");
 
 if (form) {

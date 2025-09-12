@@ -15,7 +15,7 @@
     <header class="header">
         <div class="container nav">
             <a class="brand" href="#">
-                <img src="./assets/LOGO.jpg" alt="Logo" class="logo">
+                <img src="./assets/LOGO.jpg" alt="Peeyem Holidays company logo" class="logo">
                 <span>Peeyem Holidays</span>
             </a>
 
@@ -25,10 +25,12 @@
                 <a href="#gallery">Gallery</a>
                 <a href="#packages">Packages</a>
                 <a href="#blog">Blog</a>
+                <a href="#testimonials-section">Testimonials</a>
+                <a href="#faq-section">FAQ</a>
                 <a href="#contact-section">Contact</a>
             </nav>
 
-            <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+            <div class="hamburger" aria-label="Open navigation menu"><i class="fa-solid fa-bars"></i></div>
         </div>
     </header>
 
@@ -94,35 +96,240 @@
             </div>
         </section>
 
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>PHOTO GALLERY</h2>
+                <div class="gallery-grid">
+                    <img src="https://images.unsplash.com/photo-1502604473872-a393c20058b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Scenic view of Paris with the Eiffel Tower" class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1502604473872-a393c20058b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tourist taking a picture" class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1502604473872-a393c20058b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Group of friends on a trip" class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1502604473872-a393c20058b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Backpacking adventure in the mountains" class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1502604473872-a393c20058b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Waterfalls in nature" class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1502604473872-a393c20058b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Exploring ancient ruins" class="gallery-item">
+                </div>
+            </div>
+        </section>
+
         <section id="blog">
             <div class="container">
                 <h2>OUR LATEST BLOG POSTS</h2>
-                <div id="blog-container" class="blog-posts">
-                    <div class="blog-card skeleton-loading">
-                        <div class="skeleton-image"></div>
-                        <div class="blog-card-content">
-                            <div class="skeleton-line"></div>
-                            <div class="skeleton-line short"></div>
-                            <div class="skeleton-line"></div>
-                            <div class="skeleton-line short"></div>
+                <div class="blog-posts">
+
+                <div class="blog-card">
+                    <img src="./assets/blog1.jpg" alt="A person preparing for travel" class="blog-image">
+                    <div class="blog-card-content">
+                    <h3>10 Essential Travel Tips for Stress-Free Holidays</h3>
+                    <p>Discover the best ways to prepare for your journey, from smart packing to finding the best local food spots...</p>
+                    <a href="#" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="./assets/blog2.jpg" alt="Backwaters of Kerala" class="blog-image">
+                    <div class="blog-card-content">
+                    <h3>Top 5 Destinations in Kerala You Can't Miss</h3>
+                    <p>From backwaters to hill stations, explore Kerala’s most enchanting travel spots with Peeyem Holidays...</p>
+                    <a href="#" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="./assets/blog3.jpg" alt="Person on an adventurous trek" class="blog-image">
+                    <div class="blog-card-content">
+                    <h3>Adventure Holidays: How to Plan the Perfect Trip</h3>
+                    <p>Love thrill and adventure? Here’s a quick guide to planning an action-packed holiday experience...</p>
+                    <a href="#" class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="packages" class="packages">
+            <div class="container">
+                <h2>Our Trip Plans</h2>
+                <div class="download-btn">
+                    <a href="./assets/PEEYEM HOLIDAYS TRIP PLANS.pdf" download class="btn">
+                    <i class="fa-solid fa-download"></i> Download PDF
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="packages" class="packages">
+            <div class="container">
+                <h3 class="package-category">1 Day Trips</h3>
+                <div class="package-grid">
+                    <div class="package-card">
+                        <h4>Kannur – Munnar</h4>
+                        <p><strong>Duration:</strong> 1 Day</p>
+                        <ul>
+                            <li>Breakfast, Lunch, Dinner</li>
+                            <li>Sightseeing by Non-AC Vehicle</li>
+                            <li>Tour Manager Assistance</li>
+                        </ul>
+                        <a href="mailto:peeyem.travels@gmail.com?subject=Inquiry about Kannur-Munnar 1 Day Trip&body=Hi Peeyem Holidays, I am interested in the Kannur-Munnar 1 Day trip package. Please provide me with more details. Thanks!" class="btn">Book Now</a>
+                    </div>
+                    <div class="package-card">
+                        <h4>Kannur – Ernakulam</h4>
+                        <p><strong>Duration:</strong> 1 Day</p>
+                        <ul>
+                            <li>Breakfast, Lunch, Dinner</li>
+                            <li>Entry tickets included</li>
+                            <li>Travel insurance coverage</li>
+                        </ul>
+                        <a href="mailto:peeyem.travels@gmail.com?subject=Inquiry about Kannur-Ernakulam 1 Day Trip&body=Hi Peeyem Holidays, I am interested in the Kannur-Ernakulam 1 Day trip package. Please provide me with more details. Thanks!" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <h3 class="package-category">2 Day Trips</h3>
+                <div class="package-grid">
+                    <div class="package-card">
+                        <h4>Wayanad – Ooty</h4>
+                        <p><strong>Duration:</strong> 2 Days</p>
+                        <ul>
+                            <li>Quadruple Sharing Accommodation</li>
+                            <li>Daily 3 Meals</li>
+                            <li>Entry Tickets Included</li>
+                        </ul>
+                        <a href="mailto:peeyem.travels@gmail.com?subject=Inquiry about Wayanad-Ooty 2 Day Trip&body=Hi Peeyem Holidays, I am interested in the Wayanad-Ooty 2 Day trip package. Please provide me with more details. Thanks!" class="btn">Book Now</a>
+                    </div>
+                    <div class="package-card">
+                        <h4>Kannur – Kodaikanal</h4>
+                        <p><strong>Duration:</strong> 2 Days</p>
+                        <ul>
+                            <li>Breakfast, Lunch, Dinner</li>
+                            <li>Accommodation in standard hotels</li>
+                            <li>Experienced Tour Guide</li>
+                        </ul>
+                        <a href="mailto:peeyem.travels@gmail.com?subject=Inquiry about Kannur-Kodaikanal 2 Day Trip&body=Hi Peeyem Holidays, I am interested in the Kannur-Kodaikanal 2 Day trip package. Please provide me with more details. Thanks!" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <h3 class="package-category">3 Day Trips</h3>
+                <div class="package-grid">
+                    <div class="package-card">
+                        <h4>Chikmagalur – Coorg</h4>
+                        <p><strong>Duration:</strong> 3 Days</p>
+                        <ul>
+                            <li>Quadruple Sharing Stay</li>
+                            <li>Meals as per plan</li>
+                            <li>Sightseeing & Entry Fees Included</li>
+                        </ul>
+                        <a href="mailto:peeyem.travels@gmail.com?subject=Inquiry about Chikmagalur-Coorg 3 Day Trip&body=Hi Peeyem Holidays, I am interested in the Chikmagalur-Coorg 3 Day trip package. Please provide me with more details. Thanks!" class="btn">Book Now</a>
+                    </div>
+                    <div class="package-card">
+                        <h4>Kodaikanal – Munnar</h4>
+                        <p><strong>Duration:</strong> 3 Days</p>
+                        <ul>
+                            <li>All Meals Included</li>
+                            <li>Hotel Accommodation</li>
+                            <li>Tour Manager Assistance</li>
+                        </ul>
+                        <a href="mailto:peeyem.travels@gmail.com?subject=Inquiry about Kodaikanal-Munnar 3 Day Trip&body=Hi Peeyem Holidays, I am interested in the Kodaikanal-Munnar 3 Day trip package. Please provide me with more details. Thanks!" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <h3 class="package-category">4 Day Trips</h3>
+                <div class="package-grid">
+                    <div class="package-card">
+                        <h4>Ooty – Kodaikanal – Munnar</h4>
+                        <p><strong>Duration:</strong> 4 Days</p>
+                        <ul>
+                            <li>Hotel Stay (Quad Sharing)</li>
+                            <li>3 Meals / Day</li>
+                            <li>Entry Tickets + Sightseeing</li>
+                        </ul>
+                        <a href="mailto:peeyem.travels@gmail.com?subject=Inquiry about Ooty-Kodaikanal-Munnar 4 Day Trip&body=Hi Peeyem Holidays, I am interested in the Ooty-Kodaikanal-Munnar 4 Day trip package. Please provide me with more details. Thanks!" class="btn">Book Now</a>
+                    </div>
+                    <div class="package-card">
+                        <h4>Mysore – Coorg – Chikmagalur</h4>
+                        <p><strong>Duration:</strong> 4 Days</p>
+                        <ul>
+                            <li>Comfortable AC/Non-AC Travel</li>
+                            <li>Tour Guide Included</li>
+                            <li>Cancellation Policy Available</li>
+                        </ul>
+                        <a href="mailto:peeyem.travels@gmail.com?subject=Inquiry about Mysore-Coorg-Chikmagalur 4 Day Trip&body=Hi Peeyem Holidays, I am interested in the Mysore-Coorg-Chikmagalur 4 Day trip package. Please provide me with more details. Thanks!" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="package-info">
+                    <h3>Package Inclusions</h3>
+                    <ul>
+                        <li>Accommodation in Quadruple Sharing</li>
+                        <li>3 Meals per Day (Breakfast, Lunch, Dinner)</li>
+                        <li>Sightseeing by Non-AC Vehicle</li>
+                        <li>Tour Manager Assistance</li>
+                        <li>Entry Tickets (as per itinerary)</li>
+                        <li>Travel Insurance</li>
+                    </ul>
+                    <h3>Exclusions</h3>
+                    <ul>
+                        <li>Personal Expenses</li>
+                        <li>Anything not mentioned in inclusions</li>
+                    </ul>
+                    <h3>Food Menu</h3>
+                    <p>Breakfast – Idli/Dosa + Tea/Coffee | Lunch & Dinner – Rice, Curry, Chapati, Veg/Non-Veg Curry</p>
+                    <h3>Cancellation Policy</h3>
+                    <ul>
+                        <li>10 Days before trip – 100% refund</li>
+                        <li>7 Days before trip – 50% refund</li>
+                        <li>Less than 7 Days – No refund</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials-section" class="testimonials">
+            <div class="container">
+                <h2>WHAT OUR CUSTOMERS SAY</h2>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-card active">
+                        <p>"Peeyem Holidays made our family trip to Kerala truly unforgettable. The itinerary was perfect, and the support team was incredible!"</p>
+                        <div class="customer-info">
+                            <img src="https://images.unsplash.com/photo-1539571696357-433547205423?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Customer Jane Doe" class="customer-photo">
+                            <span>Jane Doe, Kannur</span>
                         </div>
                     </div>
-                    <div class="blog-card skeleton-loading">
-                        <div class="skeleton-image"></div>
-                        <div class="blog-card-content">
-                            <div class="skeleton-line"></div>
-                            <div class="skeleton-line short"></div>
-                            <div class="skeleton-line"></div>
-                            <div class="skeleton-line short"></div>
+                    <div class="testimonial-card">
+                        <p>"The best travel agency for adventure holidays! The guide was knowledgeable, and the entire booking process was hassle-free. Highly recommend!"</p>
+                        <div class="customer-info">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a6dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Customer John Smith" class="customer-photo">
+                            <span>John Smith, Cochin</span>
                         </div>
                     </div>
-                    <div class="blog-card skeleton-loading">
-                        <div class="skeleton-image"></div>
-                        <div class="blog-card-content">
-                            <div class="skeleton-line"></div>
-                            <div class="skeleton-line short"></div>
-                            <div class="skeleton-line"></div>
-                            <div class="skeleton-line short"></div>
+                    <div class="testimonial-card">
+                        <p>"Affordable and top-quality service. Our trip was perfectly organized, allowing us to relax and enjoy every moment. Thank you, Peeyem Holidays!"</p>
+                        <div class="customer-info">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ef7f428479?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Customer Maria Garcia" class="customer-photo">
+                            <span>Maria Garcia, Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq-section" class="faq">
+            <div class="container">
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">What is included in a standard package?</button>
+                        <div class="faq-answer">
+                            <p>Our standard packages typically include accommodation, 3 meals per day (Breakfast, Lunch, Dinner), sightseeing by a non-AC vehicle, tour manager assistance, and entry tickets to attractions as per the itinerary. Please check the specific package details for a complete list of inclusions and exclusions.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What is your cancellation policy?</button>
+                        <div class="faq-answer">
+                            <p>Our cancellation policy is as follows: 10 days before the trip - 100% refund, 7 days before the trip - 50% refund, and less than 7 days before the trip - no refund. We recommend reviewing the full policy on our website before booking.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can I customize my trip package?</button>
+                        <div class="faq-answer">
+                            <p>Yes, we offer customized packages to suit your preferences. Please contact our support team with your requirements, and we will create a tailored itinerary just for you.</p>
                         </div>
                     </div>
                 </div>
@@ -147,15 +354,15 @@
                         <a href="https://www.instagram.com/peeyemholidays/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
-
                 <div class="contact-form">
-                    <h2>CONTACT FORM</h2>
+                    <h2>Send Us a Message</h2>
                     <form action="https://formspree.io/f/mqadwnvw" method="POST">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                        <input type="email" name="email" placeholder="E-mail address" required>
-                        <textarea name="message" placeholder="Message" required></textarea>
-                        <button type="submit">SEND MESSAGE</button>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
                     </form>
+                    <p id="form-message" style="display:none; margin-top:10px; "></p>
                 </div>
             </div>
         </section>
@@ -175,7 +382,10 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about-section">About Us</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#packages">Packages</a></li>
+                        <li><a href="#testimonials-section">Testimonials</a></li>
+                        <li><a href="#faq-section">FAQ</a></li>
                         <li><a href="#contact-section">Contact</a></li>
                     </ul>
                 </div>

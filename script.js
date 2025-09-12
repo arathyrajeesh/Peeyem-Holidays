@@ -1,97 +1,128 @@
-const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
         });
 
         document.addEventListener('click', (e) => {
             if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
                 navLinks.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
             }
         });
+    }
 
-        const form = document.querySelector("#contact-section form");
-        if (form) {
-            form.addEventListener("submit", async function(e) {
-                e.preventDefault();
-                const formData = new FormData(form);
-                try {
-                    const response = await fetch(form.action, {
-                        method: form.method,
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    if (response.ok) {
-                        alert("✅ Thanks! Your message has been sent.");
-                        form.reset();
-                    } else {
-                        alert("❌ Oops! Something went wrong. Please try again.");
-                    }
-                } catch (error) {
-                    alert("⚠️ Network error. Please try again later.");
-                }
-            });
-        }
+    // 2. Contact form submission handler
+    const form = document.querySelector("#contact-section form");
+    const formMessage = document.getElementById("form-message");
+    
+    if (form) {
+        form.addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
         
-        async function fetchBlogPosts() {
-            const blogContainer = document.getElementById('blog-container');
-
-            // Simulate a network delay
-            await new Promise(resolve => setTimeout(resolve, 2000));
-
-            // Real data for blog posts (This would come from an API)
-            const posts = [
-                {
-                    image: 'https://images.unsplash.com/photo-1543349688-656914f6b579?fm=jpg&q=80&w=2070',
-                    title: 'The Ultimate Guide to Mountain Treks',
-                    excerpt: 'Discover breathtaking trails and tips for your next mountain adventure. From gear to safety, we cover everything you need to know.'
-                },
-                {
-                    image: 'https://images.unsplash.com/photo-1563721345592-6663364f9f70?fm=jpg&q=80&w=2070',
-                    title: 'Exploring Hidden Gems in Kerala',
-                    excerpt: 'Journey through the serene backwaters and lush tea plantations of Kerala. Find out the best-kept secrets of God’s Own Country.'
-                },
-                {
-                    image: 'https://images.unsplash.com/photo-1549472304-fd3ae31f2378?fm=jpg&q=80&w=2070',
-                    title: 'Your First Solo Trip: A Complete Checklist',
-                    excerpt: 'Feeling adventurous? This guide will walk you through planning your first solo trip, from choosing a destination to packing essentials.'
+                if (response.ok) {
+                    formMessage.style.display = "block";
+                    formMessage.style.color = "green";
+                    formMessage.textContent = "Thanks! Your message has been sent successfully.";
+                    form.reset();
+                } else {
+                    formMessage.style.display = "block";
+                    formMessage.style.color = "red";
+                    formMessage.textContent = "Oops! Something went wrong. Please try again.";
                 }
-            ];
+            } catch (error) {
+                formMessage.style.display = "block";
+                formMessage.style.color = "orange";
+                formMessage.textContent = "Network error. Please try again later.";
+            }
 
-            // Clear the skeleton loaders
-            blogContainer.innerHTML = '';
-
-            // Generate the real blog cards
-            posts.forEach(post => {
-                const card = document.createElement('div');
-                card.className = 'blog-card';
-                card.innerHTML = `
-                    <img src="${post.image}" alt="${post.title}">
-                    <div class="blog-card-content">
-                        <h3>${post.title}</h3>
-                        <p>${post.excerpt}</p>
-                    </div>
-                `;
-                blogContainer.appendChild(card);
-            });
-        }
-        
-        // New function to load all main content sections
-        document.addEventListener("DOMContentLoaded", () => {
-            loadMainContent();
+            setTimeout(() => {
+                formMessage.style.display = "none";
+            }, 5000);
         });
+    }
+    
+    // 3. Testimonial Carousel functionality
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const testimonialDots = document.querySelectorAll('.carousel-nav .dot');
+    let currentTestimonial = 0;
 
-        async function loadMainContent() {
-            const skeleton = document.getElementById('content-skeleton');
-            const mainContent = document.getElementById('main-content');
+    function showTestimonial(index) {
+        testimonialCards.forEach(card => card.classList.remove('active'));
+        testimonialDots.forEach(dot => dot.classList.remove('active'));
+        if (testimonialCards[index] && testimonialDots[index]) {
+            testimonialCards[index].classList.add('active');
+            testimonialDots[index].classList.add('active');
+        }
+    }
 
-            // Simulate a network delay for fetching content
-            await new Promise(resolve => setTimeout(resolve, 3000));
+    testimonialDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentTestimonial = index;
+            showTestimonial(currentTestimonial);
+        });
+    });
 
-            // Hide the skeleton and show the actual content
+    setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+        showTestimonial(currentTestimonial);
+    }, 5000); // Auto-advance every 5 seconds
+
+    // 4. FAQ Accordion functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            question.classList.toggle('active');
+            answer.classList.toggle('active');
+            
+            if (answer.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = '0';
+            }
+        });
+    });
+
+    // 5. Main Content Loader (Skeleton)
+    async function loadMainContent() {
+        const skeleton = document.getElementById('content-skeleton');
+        const mainContent = document.getElementById('main-content');
+
+        await new Promise(resolve => setTimeout(resolve, 1500));
+
+        if (skeleton && mainContent) {
             skeleton.style.display = 'none';
             mainContent.style.display = 'block';
-
-            // Now that the blog section is visible, run its specific loading function
-            fetchBlogPosts();
         }
+
+        fetchBlogPosts();
+    }
+
+    // 6. Blog Post Loader (Dynamic Content)
+    async function fetchBlogPosts() {
+        const blogContainer = document.querySelector('#blog .blog-posts');
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // The posts are already in your HTML, so this function is not strictly needed
+        // but it's good practice to have it here if you ever decide to fetch from an API
+        // or a JSON file in the future. For now, it just simulates a delay.
+    }
+    
+    // Initial page load function call
+    loadMainContent();
+});

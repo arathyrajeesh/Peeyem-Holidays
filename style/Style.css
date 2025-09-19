@@ -91,7 +91,6 @@ a:hover {
   position: relative;
   height: 100vh;
   background: url("https://thumbs.dreamstime.com/b/travel-essentials-including-passport-camera-map-luggage-adventure-planning-stylish-flat-lay-light-wooden-surface-381056280.jpg") no-repeat center center/cover;
-  /* background: url("https://images.unsplash.com/photo-1456139333202-745e9029f0ef?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW91bnRhaW4lMjBhZHZlbnR1cmV8ZW58MHx8MHx8fDA%3D") no-repeat center center/cover; */
   background-attachment: fixed;
   display: flex;
   align-items: center;
@@ -1006,4 +1005,36 @@ a:hover {
 @keyframes skeleton-pulse {
   0% { background-position: -200% 0; }
   100%{ background-position: 200% 0; }
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  border-radius: 50px;      /* pill shape */
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;                 /* space between icon and text */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+  color: black;
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-text {
+  white-space: nowrap; /* keep text in one line */
 }

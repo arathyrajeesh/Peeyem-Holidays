@@ -392,7 +392,7 @@ a:hover {
 /* =====================
    CONTACT SECTION STYLES
    ===================== */
-   .contact {
+  .contact {
     background-color: var(--text-color); /* dark background */
     color: var(--white);
     padding: 4rem 1rem;
@@ -931,4 +931,79 @@ a:hover {
   .footer-col .newsletter {
       justify-content: flex-start;
   }
+}
+
+
+/* Skeleton specific CSS */
+#full-page-skeleton {
+  display: block; /* Initially show the skeleton */
+}
+#main-content {
+  display: none; /* Initially hide the actual content */
+}
+.skeleton-title,
+.skeleton-subtitle,
+.skeleton-text-line,
+.skeleton-image,
+.skeleton-icon,
+.skeleton-button,
+.skeleton-input-line,
+.skeleton-textarea,
+.skeleton-text-block,
+.skeleton-customer-photo,
+.skeleton-package-category-title {
+  background: #e2e2e2;
+  background: linear-gradient(90deg, #e2e2e2 25%, #f0f0f0 37%, #e2e2e2 63%);
+  background-size: 400% 100%;
+  animation: skeleton-pulse 1.5s infinite ease-in-out;
+  border-radius: 4px;
+}
+
+.skeleton-title { height: 30px; margin: 20px 0; width: 60%; }
+.skeleton-subtitle { height: 18px; margin: 10px 0; width: 80%; }
+.skeleton-text-line { height: 16px; margin: 8px 0; }
+.skeleton-text-line.short { width: 40%; }
+.skeleton-text-line.long { width: 90%; }
+.skeleton-text-block { height: 50px; margin: 10px 0; }
+.skeleton-link { height: 16px; width: 100px; }
+.skeleton-button { height: 40px; width: 120px; }
+.skeleton-package-category-title { height: 25px; width: 50%; margin-top: 40px; }
+
+.skeleton-about .skeleton-features-grid,
+.skeleton-gallery-grid,
+.skeleton-blog-posts,
+.skeleton-package-grid {
+  display: grid;
+  gap: 20px;
+}
+.skeleton-about .skeleton-features-grid { grid-template-columns: repeat(4, 1fr); }
+.skeleton-gallery-grid { grid-template-columns: repeat(3, 1fr); }
+.skeleton-blog-posts { grid-template-columns: repeat(3, 1fr); }
+.skeleton-package-grid { grid-template-columns: repeat(2, 1fr); }
+
+.skeleton-feature-card { padding: 20px; }
+.skeleton-icon { width: 50px; height: 50px; border-radius: 50%; margin: 0 auto 10px; }
+.skeleton-image { width: 100%; height: 200px; border-radius: 8px; }
+.skeleton-blog-card .skeleton-image { height: 150px; }
+.skeleton-package-card { padding: 20px; }
+.skeleton-list li { list-style: none; }
+.skeleton-customer-photo { width: 60px; height: 60px; border-radius: 50%; }
+.skeleton-contact-info, .skeleton-contact-form { padding: 20px; }
+.skeleton-input-line, .skeleton-textarea { border: none; }
+.skeleton-input-line { height: 40px; margin-bottom: 15px; }
+.skeleton-textarea { height: 120px; margin-bottom: 15px; }
+
+.skeleton-footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 50px 0;
+}
+.skeleton-footer .skeleton-footer-col {
+  padding: 10px;
+}
+
+@keyframes skeleton-pulse {
+  0% { background-position: -200% 0; }
+  100%{ background-position: 200% 0; }
 }
